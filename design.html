@@ -12,7 +12,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  .page { padding: 26px 30px 24px; height: 1024px; }
+  .page { padding: 22px 28px 18px; height: 1024px; }
 
   /* ---------- Masthead ---------- */
   .masthead { text-align: center; }
@@ -22,48 +22,80 @@
     line-height: 1.05; color: #191713;
   }
   .dateline {
-    margin-top: 10px;
+    margin-top: 8px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 40px; font-weight: 700; letter-spacing: 0.5px;
     color: #a31621;
   }
-  .rule-thick { height: 4px; background: #191713; margin-top: 16px; }
+  .rule-thick { height: 4px; background: #191713; margin-top: 14px; }
   .rule-thin  { height: 1.5px; background: #191713; margin-top: 3px; }
 
   /* ---------- Grid ---------- */
   .grid {
-    margin-top: 20px;
+    margin-top: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 16px;
-    height: 756px;
+    gap: 14px;
+    height: 700px;
   }
   .panel {
     background: #fffdf6;
     border: 1.5px solid #d9d2c0;
     border-top: 5px solid var(--accent, #191713);
-    padding: 15px 16px 12px;
+    padding: 16px 16px 14px;
     display: flex;
     gap: 14px;
+    align-items: flex-start;
   }
-  .icon { flex: 0 0 62px; width: 62px; height: 62px; margin-top: 4px; }
-  .icon svg { width: 62px; height: 62px; display: block; }
+  .icon { flex: 0 0 88px; width: 88px; height: 88px; margin-top: 2px; }
+  .icon svg { width: 88px; height: 88px; display: block; }
   .text { flex: 1; min-width: 0; }
   .tag {
-    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    font-size: 13px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: var(--accent, #191713);
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .headline {
-    font-size: 23px; font-weight: 800; line-height: 1.12;
-    color: #191713; margin-bottom: 6px;
+    font-size: 27px; font-weight: 800; line-height: 1.12;
+    color: #191713; margin-bottom: 7px;
   }
   .summary {
-    font-size: 15.5px; line-height: 1.38; color: #3a372f;
+    font-size: 17px; line-height: 1.42; color: #3a372f;
   }
+
+  /* ---------- By the numbers ---------- */
+  .numbers {
+    margin-top: 14px;
+    background: #191713;
+    color: #f6f1e7;
+    padding: 10px 20px 9px;
+    height: 88px;
+  }
+  .numbers-title {
+    font-size: 12px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: #e8b64c;
+    margin-bottom: 6px; text-align: center;
+  }
+  .numbers-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  .stat { text-align: center; }
+  .stat + .stat { border-left: 1px solid #4a463d; }
+  .stat-num {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px; font-weight: 700; line-height: 1.05;
+    color: #ffffff;
+  }
+  .stat-label {
+    margin-top: 3px;
+    font-size: 12.5px; line-height: 1.3; color: #cfc9b8;
+  }
+
   .footer {
-    margin-top: 14px; text-align: center;
+    margin-top: 10px; text-align: center;
     font-size: 12.5px; letter-spacing: 1.5px; color: #6b6558;
     text-transform: uppercase;
   }
@@ -135,7 +167,7 @@
       <div class="text">
         <div class="tag">Diplomacy</div>
         <div class="headline">Xi, Trump, Putin to Meet</div>
-        <div class="summary">China confirmed a first three-way summit of Xi, Trump and Putin in Shenzhen on Thursday 19 November, on the sidelines of the APEC leaders&rsquo; meeting.</div>
+        <div class="summary">China confirmed a first three-way summit of Xi, Trump and Putin in Shenzhen on Thursday 19 November, on the sidelines of the APEC leaders&rsquo; meeting. Nuclear risks, sanctions and Ukraine are on the agenda.</div>
       </div>
     </section>
 
@@ -153,7 +185,7 @@
       <div class="text">
         <div class="tag">United States</div>
         <div class="headline">Pentagon Fails Ninth Audit</div>
-        <div class="summary">The Pentagon failed its financial audit for a ninth straight year, covering more than $4.8 trillion in assets.</div>
+        <div class="summary">The Pentagon failed its financial audit for a ninth straight year, covering more than $4.8 trillion in assets. Auditors issued a disclaimer of opinion on the fiscal 2026 books.</div>
       </div>
     </section>
 
@@ -191,6 +223,28 @@
     </section>
 
   </main>
+
+  <section class="numbers">
+    <div class="numbers-title">By the Numbers</div>
+    <div class="numbers-row">
+      <div class="stat">
+        <div class="stat-num">2&times;</div>
+        <div class="stat-label">Kerch Bridge struck in under 24 hours</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">US aircraft carriers in the Middle East</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">$4.8T</div>
+        <div class="stat-label">Pentagon assets left unaudited</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Nations backing the Rwanda centre</div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">Six stories &middot; one day &middot; 17 November 2026</footer>
 
