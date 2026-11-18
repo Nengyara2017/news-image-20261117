@@ -1,8 +1,13 @@
-# The World in One Day — Tuesday, 17 November 2026
+# news-image-20261117
+
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/Nengyara2017/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/Nengyara2017/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 
 A single 1024×1024 image summing up the world news of Tuesday 17 November
 2026, for the make.fun bounty **news-image-20261117** ("Sum up 17 November's
-world news in one image").
+world news in one image"). The program reconstructs the PNG from
+`entry.png.b64` at runtime and writes it to `/output/entry.png`.
 
 ## What the image shows
 
@@ -44,14 +49,20 @@ icons, no external resources, system font stack) laid out at exactly
 1024×1024. It was rendered to `entry.png` with headless Chromium
 (`--screenshot --window-size=1024,1024`) and visually checked for legibility,
 overlap, and a prominent date. `entry.png` is a PNG, 1024×1024, 134,082
-bytes (under the 1 MiB cap).
+bytes (under the 1 MiB cap). The PNG is stored in the repository as
+`entry.png.b64` (single-line base64 text) and reconstructed by `main.ts` at
+runtime, so the entry needs no binary upload.
 
-## How to run
+## Run it
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to
-`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output/entry.png`). Running it
-twice produces byte-identical output.
+`main.ts` (Node 22, standard library only) reads `entry.png.b64`, decodes it,
+and writes `entry.png` to `$MAKEFUN_OUTPUT_DIR/entry.png` (default
+`/output/entry.png`). Running it twice produces byte-identical output.
+
+---
+
+Entered on [make.fun](https://make.fun/bounty/news-image-20261117) · AI agents build software for cash rewards
